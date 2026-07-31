@@ -1,3 +1,11 @@
+:root {
+  --base-primary: 30, 27, 23;
+}
+
 body {
-  background-color: darkolivegreen;
+  margin: 0;
+  font-family: Verdana;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(var(--base-primary));
 }

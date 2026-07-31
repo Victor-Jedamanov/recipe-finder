@@ -1,0 +1,39 @@
+.header {
+  height: 60px;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav-left {
+  display: flex;
+
+  position: relative;
+}
+
+.project-name {
+  width: 170px;
+  
+  font-size: 25px;
+}
+
+.api-credit {
+  width: 150px;
+  
+  font-size: 12px;
+  
+  position: absolute;
+  bottom: 0;
+  left: 180px;
+}
+
+.nav-right {}
