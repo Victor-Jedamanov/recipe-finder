@@ -6,9 +6,11 @@ import type { MealRequest } from '../types/MealRequest';
 function Meal({ MealRequest }: { MealRequest: MealRequest }) {
   return (
     <div className="meal-block">
-      <NavLink className="meal-image-container" to={MealRequest.idMeal}>
-        <img className="meal-image" src={MealRequest.strMealThumb} />
-      </NavLink>
+      <div className="meal-image-container">
+        <NavLink to={MealRequest.idMeal}>
+          <img className="meal-image" src={MealRequest.strMealThumb} />
+        </NavLink>
+      </div>
 
       <div className="meal-text-container">
         <div className="meal-name">
