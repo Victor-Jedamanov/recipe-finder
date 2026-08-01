@@ -1,5 +1,5 @@
 .meal-block {
-  height: 315px;
+  height: 330px;
   width: 250px;
 
   background-color: white;
@@ -20,7 +20,7 @@
 }
 
 .meal-block .meal-text-container {
-  height: 55px;
+  height: 70px;
   width: 240px;
 
   background-color: grey;
