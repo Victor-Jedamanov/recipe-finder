@@ -27,8 +27,6 @@ function HomePage() {
       <Header />
 
       <div className="home-page" >
-        This is the HomePage {requestedMeals[0] && requestedMeals[0].idMeal}
-
         <Grid
           sx={{
             justifyContent: "center",

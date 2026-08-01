@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router';
 import './Header.css';
 
 function Header() {
@@ -5,9 +6,9 @@ function Header() {
     <>
       <div className="header">
         <div className="nav-left">
-          <div className="project-name">
+          <NavLink className="project-name" to="/">
             Recipe Finder
-          </div>
+          </NavLink>
           <div className="api-credit">
             Powered by TheMealDB
           </div>

@@ -1,0 +1,18 @@
+.meal-page {
+  margin-top: 60px;
+}
+
+.meal-page .meal-display {
+  height: 700px;
+  width: 500px;
+
+  background-color: aquamarine;
+
+  padding: 25px;
+  margin-top: 80px;
+  margin-left: 50px;
+}
+
+.meal-page .meal-image {
+  height: 500px;
+}
