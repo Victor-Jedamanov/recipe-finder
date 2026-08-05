@@ -1,3 +1,31 @@
 .home-page {
   margin-top: 60px;
+  padding-top: 2%;
+}
+
+.search-container {
+  height: 60%;
+
+  background-color: lightsalmon;
+  border-radius: 1rem;
+
+  display: flex;
+  justify-content: center;
+
+  position: fixed;
+  left: 2%;
+  right: 74%;
+}
+
+.search-input {
+  height: 1.5rem;
+  width: 80%;
+
+  margin-top: 1rem;
+
+  font-size: 1rem;
+}
+
+.meal-grid {
+  margin-left: 28%;
 }

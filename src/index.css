@@ -1,5 +1,6 @@
 :root {
   --base-primary: 30, 27, 23;
+  --base-secondary: 46, 51, 25;
 
   scrollbar-width: none
 }

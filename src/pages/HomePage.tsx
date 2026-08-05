@@ -14,7 +14,7 @@ function HomePage() {
   const [requestedMeals, setRequestedMeals] = useState<MealRequest[] | null>(null);
 
   useEffect(() => {
-  
+
     async function testFunc() {
       const response = await fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list');
       const data = await response.json();
@@ -47,23 +47,27 @@ function HomePage() {
       <Header />
 
       <div className="home-page" >
-        <Grid
-          sx={{
-            justifyContent: "center",
-            alignItems: "center",
-            paddingTop: "1rem"
-          }}
-          container
-          spacing={3}
-        >
-          {requestedMeals && requestedMeals.map((meal) => {
-            return (
-              <Grid key={meal.idMeal}>
-                <Meal MealRequest={meal} />
-              </Grid>
-            );
-          })}
-        </Grid>
+        <div className="search-container">
+          <input className="search-input" placeholder="Search for your next meal" />
+        </div>
+        <div className="meal-grid">
+          <Grid
+            sx={{
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+            container
+            spacing={3}
+          >
+            {requestedMeals && requestedMeals.map((meal) => {
+              return (
+                <Grid key={meal.idMeal}>
+                  <Meal MealRequest={meal} />
+                </Grid>
+              );
+            })}
+          </Grid>
+        </div>
       </div>
     </>
   );

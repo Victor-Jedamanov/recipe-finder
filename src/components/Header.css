@@ -4,7 +4,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
 
-  background-color: rgb(var(--base-primary));
+  background-color: rgb(var(--base-secondary));
 
   display: flex;
   align-items: center;
