@@ -7,18 +7,38 @@ import './HomePage.css';
 // import type { MealInfo } from '../types/MealInfo';
 import type { MealRequest } from '../types/MealRequest';
 
+import dayjs from 'dayjs';
+import { md5 } from 'js-md5';
+
 function HomePage() {
-  // const [meals, setMeals] = useState<MealInfo[]>([]);
-  const [requestedMeals, setRequestedMeals] = useState<MealRequest[]>([]);
+  const [requestedMeals, setRequestedMeals] = useState<MealRequest[] | null>(null);
 
   useEffect(() => {
-    fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
-      .then((response) => response.json())
-      .then((json) => setRequestedMeals(json.meals));
+  
+    async function testFunc() {
+      const response = await fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list');
+      const data = await response.json();
+      const areas = data.meals;
 
+      const areaIndex = md5.array(dayjs().format('YYMMDD'))[0] % areas.length;
+
+      console.log(areas);
+
+      let areaStats = null;
+      let offset = 0;
+      while (areaStats == null || areaStats.length < 6) {
+        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${areas[areaIndex + offset].strArea}`);
+        const data = await response.json();
+        areaStats = data.meals;
+        offset++;
+      }
+
+      console.log(areaStats);
+      setRequestedMeals(areaStats);
+    }
+
+    testFunc();
   }, []);
-
-  console.log(requestedMeals[0] && requestedMeals[0].idMeal);
 
   return (
     <>
@@ -36,7 +56,7 @@ function HomePage() {
           container
           spacing={3}
         >
-          {requestedMeals.map((meal) => {
+          {requestedMeals && requestedMeals.map((meal) => {
             return (
               <Grid key={meal.idMeal}>
                 <Meal MealRequest={meal} />
