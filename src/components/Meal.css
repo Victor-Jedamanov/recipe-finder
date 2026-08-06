@@ -1,38 +1,40 @@
 .meal-block {
   height: 330px;
-  width: 250px;
-
-  background-color: white;
-  border-radius: 10px;
+  width: 230px;
 
   padding: 10px;
+
+  background-color: white;
+  border-radius: 10px;  
 
   color: black;
   text-align: center;
 }
 
 .meal-block .meal-image-container {
-  height: 250px;
+  height: 230px;
 }
 
 .meal-block .meal-image {
-  height: 250px;
+  height: 230px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .meal-block .meal-text-container {
-  height: 70px;
-  width: 240px;
+  height: 90px;
+  width: 220px;
+
+  padding: 5px;
 
   background-color: grey;
   border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-
-  padding: 5px;
+  border-bottom-right-radius: 10px;  
 }
 
 .meal-block .meal-name {
   font-size: 16px;
-
 }
 
 .meal-block .meal-country {
